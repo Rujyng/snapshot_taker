@@ -1,0 +1,23 @@
+{
+  "name": "research-code-snapshots",
+  "displayName": "Research Code Snapshots",
+  "description": "Offline research capture of unsaved source edits and timestamped code snapshots.",
+  "version": "1.0.0",
+  "publisher": "local-research-tools",
+  "license": "MIT",
+  "engines": { "vscode": "^1.85.0" },
+  "categories": ["Other"],
+  "main": "./extension.js",
+  "extensionKind": ["workspace"],
+  "activationEvents": ["onStartupFinished"],
+  "capabilities": { "untrustedWorkspaces": { "supported": false }, "virtualWorkspaces": false },
+  "contributes": {
+    "commands": [
+      { "command": "researchSnapshots.start", "title": "Code Snapshots: Start Recording" },
+      { "command": "researchSnapshots.stop", "title": "Code Snapshots: Stop Recording" },
+      { "command": "researchSnapshots.mark", "title": "Code Snapshots: Add Sync Marker" },
+      { "command": "researchSnapshots.openOutput", "title": "Code Snapshots: Open Output Folder" }
+    ]
+  },
+  "scripts": { "test": "node --test --test-isolation=none test/*.test.js", "package": "python3 tools/package.py" }
+}

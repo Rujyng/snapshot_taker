@@ -1,0 +1,2 @@
+3e4eb6bd796244f245f290beb90853fdd9a80356357346697f4dbcfb6174627f  research-code-snapshots-1.0.0.vsix
+038b0d55fe2ba1c01e87d467edab8795b3328797f45502a6d0ddde5286c5b76e  code-snapshots-school-kit.zip

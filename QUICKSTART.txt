@@ -1,0 +1,30 @@
+RESEARCH CODE SNAPSHOTS — SCHOOL SETUP
+
+1. Upload research-code-snapshots-1.0.0.vsix to Google Drive.
+2. At school, download it. Open desktop VS Code.
+3. Ctrl+Shift+P > Extensions: Install from VSIX… > choose that file.
+   Reload if prompted. School policy must permit extension installation.
+4. File > Open Folder > open the experiment task folder. Close unrelated tabs.
+5. Ctrl+Shift+P > Code Snapshots: Start Recording.
+   Enter P01 (or another anonymous ID), then choose a local output folder.
+6. Check the status bar says Snapshots: P01. Unsaved code is captured.
+7. During Tobii video recording, run Code Snapshots: Add Sync Marker.
+8. At the end, run Code Snapshots: Stop Recording.
+9. Run Code Snapshots: Open Output Folder. Copy the WHOLE session folder.
+
+Before the experiment, rehearse with participant ID TEST:
+type unfinished code WITHOUT saving, wait 12 seconds, delete and undo, then stop.
+Check the text inside current/ and snapshots/. Use a new session per participant.
+
+Needs desktop VS Code 1.85+ in a local window. No Python/Node install or login
+needed for capture. WSL/SSH/container windows are not supported. Keep local output
+outside the task folder. Recording does not resume automatically after a reload.
+
+Snapshots are taken at start, about every 10 seconds, and stop. All edit events
+are also logged. Closed buffers retain their last observed text. Unopened files
+are not captured. These are source-code copies, not screenshots.
+
+Keep Tobii gaze/video times separate until alignment is established. Sync marker
+command time and its visible notification onset are not guaranteed identical.
+
+README.md explains every output file, limitations and optional integrity checks.
